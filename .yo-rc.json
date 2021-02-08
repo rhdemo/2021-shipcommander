@@ -1,0 +1,46 @@
+{
+  "generator-jhipster": {
+    "promptValues": {
+      "packageName": "com.redhat"
+    },
+    "jhipsterVersion": "6.10.5",
+    "applicationType": "monolith",
+    "baseName": "shipcommander",
+    "packageName": "com.redhat",
+    "packageFolder": "com/redhat",
+    "serverPort": "8080",
+    "authenticationType": "jwt",
+    "cacheProvider": "caffeine",
+    "enableHibernateCache": true,
+    "websocket": false,
+    "databaseType": "sql",
+    "devDatabaseType": "h2Memory",
+    "prodDatabaseType": "postgresql",
+    "messageBroker": false,
+    "buildTool": "maven",
+    "jwtSecretKey": "ZTNmMjA5Mjc4ZWU2MWMzOThiYmVkZjJhZDRlOTJmN2YxMjI3MDQxNDhkMzhkNmI3YWYyZmY4NmEyOTM5MDZmZTA3MDlmMmM0MmEwZjkxNjdhZTVhN2MwZWJhYzUyYTlmYWUyNzA2ZWI5YTk2ZmY4NzZkOWJjZTUzMjNlNGE0YWU=",
+    "embeddableLaunchScript": false,
+    "useSass": true,
+    "clientPackageManager": "npm",
+    "clientFramework": "angularX",
+    "clientTheme": "none",
+    "clientThemeVariant": "",
+    "creationTimestamp": 1612794650107,
+    "jhiPrefix": "jhi",
+    "entitySuffix": "",
+    "dtoSuffix": "DTO",
+    "otherModules": [
+      {
+        "name": "generator-jhipster-quarkus",
+        "version": "1.0.0"
+      }
+    ],
+    "enableTranslation": false,
+    "blueprints": [
+      {
+        "name": "generator-jhipster-quarkus",
+        "version": "1.0.0"
+      }
+    ]
+  }
+}

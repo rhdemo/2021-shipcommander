@@ -1,0 +1,74 @@
+entity Company {
+    name String
+    addressLine String
+    city String
+    country String
+}
+
+entity Container {
+    description String
+}
+
+relationship OneToOne {
+    Container{sender(name)} to Company
+}
+
+relationship OneToOne {
+    Container{receiver(name)} to Company
+}
+
+relationship OneToMany {
+    Container{readings} to SensorReadings
+}
+
+
+entity Port {
+    name String
+    latitude Double
+    longtitude Double
+}
+
+entity SensorReadings {
+    temperature Double
+    latitude Double
+    longtitude Double
+    humidityRate Double
+}
+
+entity Ship {
+    name String
+    vesselType ShipType
+}
+
+enum ShipType {
+    CONTAINER_VESSEL, BULK_VESSEL, REEFER_VESSEL, BARGE_VESSEL
+}
+
+entity Shipment {
+
+}
+
+relationship OneToOne {
+    Shipment{startPort(name)} to Port
+}
+
+relationship OneToOne {
+    Shipment{endPort(name)} to Port
+}
+
+relationship OneToOne {
+    Shipment{ship(name)} to Ship
+}
+
+relationship OneToMany {
+    Shipment{containers(description)} to Container
+}
+
+
+
+// Set pagination options
+paginate SensorReadings, Shipment with infinite-scroll
+paginate Company, Container, Port, Ship with pagination
+
+// Use Data Transfer Objects (DTO)
+dto * with mapstruct
