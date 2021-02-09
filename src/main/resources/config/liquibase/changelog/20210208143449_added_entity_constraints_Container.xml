@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<databaseChangeLog
+    xmlns="http://www.liquibase.org/xml/ns/dbchangelog"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xsi:schemaLocation="http://www.liquibase.org/xml/ns/dbchangelog http://www.liquibase.org/xml/ns/dbchangelog/dbchangelog-3.9.xsd">
+    <!--
+        Added the constraints for entity Container.
+    -->
+    <changeSet id="20210208143449-2" author="jhipster">
+        
+        <addForeignKeyConstraint baseColumnNames="sender_id"
+                                 baseTableName="container"
+                                 constraintName="fk_container_sender_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company"/>
+
+        <addForeignKeyConstraint baseColumnNames="receiver_id"
+                                 baseTableName="container"
+                                 constraintName="fk_container_receiver_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="company"/>
+
+        <addForeignKeyConstraint baseColumnNames="shipment_id"
+                                 baseTableName="container"
+                                 constraintName="fk_container_shipment_id"
+                                 referencedColumnNames="id"
+                                 referencedTableName="shipment"/>
+
+    </changeSet>
+</databaseChangeLog>

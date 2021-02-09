@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="sensorReadings">
+            <h2><span>Sensor Readings</span> {{ sensorReadings.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Temperature</span></dt>
+                <dd>
+                    <span>{{ sensorReadings.temperature }}</span>
+                </dd>
+                <dt><span>Latitude</span></dt>
+                <dd>
+                    <span>{{ sensorReadings.latitude }}</span>
+                </dd>
+                <dt><span>Longtitude</span></dt>
+                <dd>
+                    <span>{{ sensorReadings.longtitude }}</span>
+                </dd>
+                <dt><span>Humidity Rate</span></dt>
+                <dd>
+                    <span>{{ sensorReadings.humidityRate }}</span>
+                </dd>
+                <dt><span>Container</span></dt>
+                <dd>
+                    <div *ngIf="sensorReadings.containerId">
+                        <a [routerLink]="['/container', sensorReadings.containerId, 'view']">{{ sensorReadings.containerId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/sensor-readings', sensorReadings.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,26 @@
+{
+  "name": "Ship",
+  "fields": [
+    {
+      "fieldName": "name",
+      "fieldType": "String"
+    },
+    {
+      "fieldName": "vesselType",
+      "fieldType": "ShipType",
+      "fieldValues": "CONTAINER_VESSEL,BULK_VESSEL,REEFER_VESSEL,BARGE_VESSEL"
+    }
+  ],
+  "relationships": [],
+  "changelogDate": "20210208143749",
+  "entityTableName": "ship",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

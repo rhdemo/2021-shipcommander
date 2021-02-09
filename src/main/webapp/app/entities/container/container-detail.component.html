@@ -1,0 +1,48 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="container">
+            <h2><span>Container</span> {{ container.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Description</span></dt>
+                <dd>
+                    <span>{{ container.description }}</span>
+                </dd>
+                <dt><span>Sender</span></dt>
+                <dd>
+                    <div *ngIf="container.senderId">
+                        <a [routerLink]="['/company', container.senderId, 'view']">{{ container.senderName }}</a>
+                    </div>
+                </dd>
+                <dt><span>Receiver</span></dt>
+                <dd>
+                    <div *ngIf="container.receiverId">
+                        <a [routerLink]="['/company', container.receiverId, 'view']">{{ container.receiverName }}</a>
+                    </div>
+                </dd>
+                <dt><span>Shipment</span></dt>
+                <dd>
+                    <div *ngIf="container.shipmentId">
+                        <a [routerLink]="['/shipment', container.shipmentId, 'view']">{{ container.shipmentId }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/container', container.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

@@ -1,0 +1,11 @@
+id;name;vessel_type
+1;Cambridgeshire;REEFER_VESSEL
+2;bi-directional;REEFER_VESSEL
+3;Cotton;BULK_VESSEL
+4;back-end architectures;REEFER_VESSEL
+5;Franc;BARGE_VESSEL
+6;repurpose;BULK_VESSEL
+7;area Russian;BARGE_VESSEL
+8;Supervisor Massachusetts Granite;CONTAINER_VESSEL
+9;withdrawal Cross-platform;REEFER_VESSEL
+10;database Representative;REEFER_VESSEL

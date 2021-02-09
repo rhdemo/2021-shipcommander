@@ -1,0 +1,50 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <form name="editForm" role="form" novalidate (ngSubmit)="save()" [formGroup]="editForm">
+            <h2 id="jhi-shipment-heading">Create or edit a Shipment</h2>
+
+            <div>
+                <jhi-alert-error></jhi-alert-error>
+
+                <div class="form-group" [hidden]="!editForm.get('id')!.value">
+                    <label for="id">ID</label>
+                    <input type="text" class="form-control" id="id" name="id" formControlName="id" readonly />
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_startPort">Start Port</label>
+                    <select class="form-control" id="field_startPort" name="startPort" formControlName="startPortId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="portOption.id" *ngFor="let portOption of startports; trackBy: trackById">{{ portOption.name }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_endPort">End Port</label>
+                    <select class="form-control" id="field_endPort" name="endPort" formControlName="endPortId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="portOption.id" *ngFor="let portOption of endports; trackBy: trackById">{{ portOption.name }}</option>
+                    </select>
+                </div>
+
+                <div class="form-group">
+                    <label class="form-control-label" for="field_ship">Ship</label>
+                    <select class="form-control" id="field_ship" name="ship" formControlName="shipId">
+                        <option [ngValue]="null"></option>
+                        <option [ngValue]="shipOption.id" *ngFor="let shipOption of ships; trackBy: trackById">{{ shipOption.name }}</option>
+                    </select>
+                </div>
+            </div>
+
+            <div>
+                <button type="button" id="cancel-save" class="btn btn-secondary" (click)="previousState()">
+                    <fa-icon icon="ban"></fa-icon>&nbsp;<span>Cancel</span>
+                </button>
+
+                <button type="submit" id="save-entity" [disabled]="editForm.invalid || isSaving" class="btn btn-primary">
+                    <fa-icon icon="save"></fa-icon>&nbsp;<span>Save</span>
+                </button>
+            </div>
+        </form>
+    </div>
+</div>

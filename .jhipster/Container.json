@@ -1,0 +1,51 @@
+{
+  "name": "Container",
+  "fields": [
+    {
+      "fieldName": "description",
+      "fieldType": "String"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "company",
+      "otherEntityRelationshipName": "container",
+      "relationshipName": "sender",
+      "otherEntityField": "name",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "company",
+      "otherEntityRelationshipName": "container",
+      "relationshipName": "receiver",
+      "otherEntityField": "name",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "sensorReadings",
+      "otherEntityRelationshipName": "container",
+      "relationshipName": "readings"
+    },
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "shipment",
+      "otherEntityRelationshipName": "containers",
+      "relationshipName": "shipment",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210208143449",
+  "entityTableName": "container",
+  "dto": "mapstruct",
+  "pagination": "pagination",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

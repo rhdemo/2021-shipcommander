@@ -1,0 +1,41 @@
+{
+  "name": "SensorReadings",
+  "fields": [
+    {
+      "fieldName": "temperature",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "latitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "longtitude",
+      "fieldType": "Double"
+    },
+    {
+      "fieldName": "humidityRate",
+      "fieldType": "Double"
+    }
+  ],
+  "relationships": [
+    {
+      "relationshipType": "many-to-one",
+      "otherEntityName": "container",
+      "otherEntityRelationshipName": "readings",
+      "relationshipName": "container",
+      "otherEntityField": "id"
+    }
+  ],
+  "changelogDate": "20210208143649",
+  "entityTableName": "sensor_readings",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}

@@ -1,0 +1,44 @@
+<div class="row justify-content-center">
+    <div class="col-8">
+        <div *ngIf="shipment">
+            <h2><span>Shipment</span> {{ shipment.id }}</h2>
+
+            <hr>
+
+            <jhi-alert-error></jhi-alert-error>
+
+            <dl class="row-md jh-entity-details">
+                <dt><span>Start Port</span></dt>
+                <dd>
+                    <div *ngIf="shipment.startPortId">
+                        <a [routerLink]="['/port', shipment.startPortId, 'view']">{{ shipment.startPortName }}</a>
+                    </div>
+                </dd>
+                <dt><span>End Port</span></dt>
+                <dd>
+                    <div *ngIf="shipment.endPortId">
+                        <a [routerLink]="['/port', shipment.endPortId, 'view']">{{ shipment.endPortName }}</a>
+                    </div>
+                </dd>
+                <dt><span>Ship</span></dt>
+                <dd>
+                    <div *ngIf="shipment.shipId">
+                        <a [routerLink]="['/ship', shipment.shipId, 'view']">{{ shipment.shipName }}</a>
+                    </div>
+                </dd>
+            </dl>
+
+            <button type="submit"
+                    (click)="previousState()"
+                    class="btn btn-info">
+                <fa-icon icon="arrow-left"></fa-icon>&nbsp;<span>Back</span>
+            </button>
+
+            <button type="button"
+                    [routerLink]="['/shipment', shipment.id, 'edit']"
+                    class="btn btn-primary">
+                <fa-icon icon="pencil-alt"></fa-icon>&nbsp;<span>Edit</span>
+            </button>
+        </div>
+    </div>
+</div>

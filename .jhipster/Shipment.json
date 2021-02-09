@@ -1,0 +1,47 @@
+{
+  "name": "Shipment",
+  "fields": [],
+  "relationships": [
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "port",
+      "otherEntityRelationshipName": "shipment",
+      "relationshipName": "startPort",
+      "otherEntityField": "name",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "port",
+      "otherEntityRelationshipName": "shipment",
+      "relationshipName": "endPort",
+      "otherEntityField": "name",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-one",
+      "otherEntityName": "ship",
+      "otherEntityRelationshipName": "shipment",
+      "relationshipName": "ship",
+      "otherEntityField": "name",
+      "ownerSide": true
+    },
+    {
+      "relationshipType": "one-to-many",
+      "otherEntityName": "container",
+      "otherEntityRelationshipName": "shipment",
+      "relationshipName": "containers"
+    }
+  ],
+  "changelogDate": "20210208143849",
+  "entityTableName": "shipment",
+  "dto": "mapstruct",
+  "pagination": "infinite-scroll",
+  "service": "serviceClass",
+  "jpaMetamodelFiltering": false,
+  "fluentMethods": true,
+  "readOnly": false,
+  "embedded": false,
+  "clientRootFolder": "",
+  "applications": "*"
+}
