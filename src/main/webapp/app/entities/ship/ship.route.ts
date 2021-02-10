@@ -39,7 +39,7 @@ export const shipRoute: Routes = [
     path: '',
     component: ShipComponent,
     data: {
-      authorities: [Authority.USER],
+      authorities: [],
       defaultSort: 'id,asc',
       pageTitle: 'Ships',
     },
@@ -52,7 +52,7 @@ export const shipRoute: Routes = [
       ship: ShipResolve,
     },
     data: {
-      authorities: [Authority.USER],
+      authorities: [],
       pageTitle: 'Ships',
     },
     canActivate: [UserRouteAccessService],
@@ -64,7 +64,7 @@ export const shipRoute: Routes = [
       ship: ShipResolve,
     },
     data: {
-      authorities: [Authority.USER],
+      authorities: [],
       pageTitle: 'Ships',
     },
     canActivate: [UserRouteAccessService],
@@ -76,7 +76,7 @@ export const shipRoute: Routes = [
       ship: ShipResolve,
     },
     data: {
-      authorities: [Authority.USER],
+      authorities: [],
       pageTitle: 'Ships',
     },
     canActivate: [UserRouteAccessService],

@@ -39,7 +39,7 @@ export const portRoute: Routes = [
     path: '',
     component: PortComponent,
     data: {
-      authorities: [Authority.USER],
+      authorities: [],
       defaultSort: 'id,asc',
       pageTitle: 'Ports',
     },
@@ -52,7 +52,7 @@ export const portRoute: Routes = [
       port: PortResolve,
     },
     data: {
-      authorities: [Authority.USER],
+      authorities: [],
       pageTitle: 'Ports',
     },
     canActivate: [UserRouteAccessService],
@@ -64,7 +64,7 @@ export const portRoute: Routes = [
       port: PortResolve,
     },
     data: {
-      authorities: [Authority.USER],
+      authorities: [],
       pageTitle: 'Ports',
     },
     canActivate: [UserRouteAccessService],
@@ -76,7 +76,7 @@ export const portRoute: Routes = [
       port: PortResolve,
     },
     data: {
-      authorities: [Authority.USER],
+      authorities: [],
       pageTitle: 'Ports',
     },
     canActivate: [UserRouteAccessService],

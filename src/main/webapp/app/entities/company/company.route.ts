@@ -39,7 +39,7 @@ export const companyRoute: Routes = [
     path: '',
     component: CompanyComponent,
     data: {
-      authorities: [Authority.USER],
+      authorities: [],
       defaultSort: 'id,asc',
       pageTitle: 'Companies',
     },
@@ -52,7 +52,7 @@ export const companyRoute: Routes = [
       company: CompanyResolve,
     },
     data: {
-      authorities: [Authority.USER],
+      authorities: [],
       pageTitle: 'Companies',
     },
     canActivate: [UserRouteAccessService],
@@ -64,7 +64,7 @@ export const companyRoute: Routes = [
       company: CompanyResolve,
     },
     data: {
-      authorities: [Authority.USER],
+      authorities: [],
       pageTitle: 'Companies',
     },
     canActivate: [UserRouteAccessService],
@@ -76,7 +76,7 @@ export const companyRoute: Routes = [
       company: CompanyResolve,
     },
     data: {
-      authorities: [Authority.USER],
+      authorities: [],
       pageTitle: 'Companies',
     },
     canActivate: [UserRouteAccessService],
